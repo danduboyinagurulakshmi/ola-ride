@@ -24,7 +24,7 @@ $env:OLA_DATA_PATH = "C:\path\to\OLA_DataSet.xlsx"
 streamlit run app.py
 ```
 
-The dashboard offers date, status, vehicle, and payment filters; overall, vehicle, revenue, cancellation, and rating views; a SQL explorer; and CSV downloads. SQL question outputs use the active filters.
+The dashboard offers date, status, vehicle, and payment filters; overall, vehicle, revenue, cancellation, and rating views; a SQL explorer; and CSV downloads. SQL question outputs use the active filters. Use the **Dark appearance** switch in the sidebar to change between the light and dark dashboard themes. The responsive layout includes animated entrances and hover feedback; animations respect the browser's reduced-motion preference.
 
 ## Cleaning and EDA exports
 
