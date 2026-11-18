@@ -1,0 +1,42 @@
+Total Bookings =
+COUNTROWS(bookings)
+
+Successful Bookings =
+CALCULATE(
+    [Total Bookings],
+    bookings[booking_status] = "Success"
+)
+
+Success Rate =
+DIVIDE([Successful Bookings], [Total Bookings], 0)
+
+Successful Booking Value (INR) =
+CALCULATE(
+    SUM(bookings[booking_value]),
+    bookings[booking_status] = "Success"
+)
+
+Average Successful Ride Distance (km) =
+CALCULATE(
+    AVERAGE(bookings[ride_distance]),
+    bookings[booking_status] = "Success",
+    bookings[ride_distance] > 0
+)
+
+Average Customer Rating =
+CALCULATE(
+    AVERAGE(bookings[customer_rating]),
+    bookings[booking_status] = "Success"
+)
+
+Customer Cancellations =
+CALCULATE(
+    [Total Bookings],
+    bookings[booking_status] = "Canceled by Customer"
+)
+
+Driver Cancellations =
+CALCULATE(
+    [Total Bookings],
+    bookings[booking_status] = "Canceled by Driver"
+)

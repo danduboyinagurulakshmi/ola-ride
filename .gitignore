@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.streamlit/secrets.toml
+reports/cleaned_bookings.csv
+reports/data_quality.csv
+reports/eda_summary.csv
+/OLA_DataSet.xlsx
